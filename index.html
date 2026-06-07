@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Character Counter</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            width: 400px;
+            height: 150px;
+            padding: 10px;
+            resize: none;
+        }
+
+        #counter {
+            margin-top: 10px;
+        }
+
+        #warning {
+            margin-top: 10px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Character Counter</h2>
+
+        <p>Maximum 200 characters allowed</p>
+
+        <textarea id="message" maxlength="200"></textarea>
+
+        <p id="counter">0 / 200 Characters</p>
+
+        <p id="warning"></p>
+
+    </div>
+
+    <script>
+
+        var textarea = document.getElementById("message");
+        var counter = document.getElementById("counter");
+        var warning = document.getElementById("warning");
+
+        textarea.addEventListener("input", countCharacters);
+
+        function countCharacters() {
+
+            var typedCharacters = textarea.value.length;
+
+            var remainingCharacters = 200 - typedCharacters;
+
+            counter.textContent =
+                typedCharacters + "/200 Characters, " +
+                remainingCharacters + " Remaining";
+
+            if (typedCharacters >= 200) {
+
+                warning.textContent =
+                    "Character Limit Reached!";
+            }
+            else {
+
+                warning.textContent = "";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
