@@ -27,23 +27,6 @@ A simple Character Counter web application built using HTML, CSS, and JavaScript
 5. The remaining character count is displayed.
 6. When the user reaches 200 characters, a warning message appears.
 
-## Project Structure
-
-```
-Character-Counter/
-│
-├── index.html
-└── README.md
-```
-
-## Screenshot
-
-Add a screenshot of your project here.
-
-```
-screenshots/project-preview.png
-```
-
 ## Learning Outcomes
 
 This project helped practice:
@@ -58,11 +41,3 @@ This project helped practice:
 ## Author
 
 Arjun
-
-## Live Demo
-
-Add your GitHub Pages link here after deployment.
-
-```
-https://your-username.github.io/repository-name/
-```
